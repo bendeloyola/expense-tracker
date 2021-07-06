@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import App from './App';
-import ExpenseFilter from './Expenses/ExpenseFilter'
+// import ExpenseFilter from './Expenses/ExpenseFilter'
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -10,7 +10,7 @@ import ExpenseFilter from './Expenses/ExpenseFilter'
 // });
 
 
-test('renders Add Expense', () => {
+test('Renders Add Expense', () => {
   render(<App />);
   const linkElement = screen.getByText(/Add New Expense/i);
   expect(linkElement).toBeInTheDocument();
@@ -31,9 +31,9 @@ test('Display chart', () => {
 });
 
 
-test('display $1000', () => {
+test('Display 100000', () => {
   render(<App />);
-  const displayAmount = screen.getByText(/1000/i);
+  const displayAmount = screen.getByText(/100000/i);
   expect(displayAmount).toBeInTheDocument();
 });
 
